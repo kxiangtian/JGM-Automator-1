@@ -1,14 +1,16 @@
 import time,json
 
-def load_json(file: str):
-    f=open(file,encoding='utf-8')
-    content=f.read()
-    res=json.loads(content)
-    # print(res)#打印字典
-    return(res)
+# def load_json(file: str):
+#     f=open(file,encoding='utf-8')
+#     content=f.read()
+#     res=json.loads(content)
+#     # print(res)#打印字典
+#     return(res)
 
-def get_upgrade_list(json_list: dict):
-    return list(zip(json_list['要升级的建筑物'], json_list['对应升级次数']))
+# def get_upgrade_list(json_list: dict):
+#     return list(zip(json_list['要升级的建筑物'], json_list['对应升级次数']))
+
+# def clip_triangle()
 
 def short_wait():
     time.sleep(0.2)
@@ -20,17 +22,6 @@ def mid_wait():
 GOODS_POSITIONS = { 1: (0.609,0.854),
                     2: (0.758,0.815),
                     3: (0.896,0.766)}
-
-# 绿色光环检测的中心位置  540*960下的绝对位置
-GOODS_SAMPLE_POSITIONS = {  1: (98, 634),
-                            2: (226, 569),
-                            3: (346, 508),
-                            4: (96, 503),
-                            5: (221, 439),
-                            6: (346, 377),
-                            7: (100, 379),
-                            8: (223, 316),
-                            9: (349, 249)}
 
 # 货物的那个叉叉的位置 相对位置
 CROSS_POSITIONS = { 1: (0.632, 0.878),
@@ -50,6 +41,14 @@ BUILDING_POSITIONS = {
             9: (787/1080, 447/1920)
         }
 
-if __name__ == '__main__':
-    print(get_upgrade_list(load_json('./config.json')))
+
+REDBAG_PHOTO_POSTION = {
+    'small': (216/1080, 700/1920),
+    'middle': (540/1080, 700/1920),
+    'large': (864/1080, 700/1920),
+    'photo': (540/1080, 1413/1920),
+}
+
+# if __name__ == '__main__':
+#     print(get_upgrade_list(load_json('./config.json')))
     
